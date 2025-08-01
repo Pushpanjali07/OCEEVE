@@ -62,5 +62,5 @@ This project is licensed under the MIT License — see [LICENSE](./LICENSE) file
 
 ## 🙋‍♀️ Author
 
-Made with ❤️ by [Your Name]  
-GitHub: [github.com/yourusername](https://github.com/yourusername)
+Made with ❤️ by Pushpanjali  
+GitHub: [https://github.com/Pushpanjali07](https://github.com/Pushpanjali07)
