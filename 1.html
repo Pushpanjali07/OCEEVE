@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <style>
+      *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        h2{
+            text-align: center;
+        }
+        body{
+        
+            min-height: 100vh;
+            background-image:url("bl.jpg");
+            background-size: cover;
+        }
+        .wrapper{
+            max-width: 500px;
+            background-color: white;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            margin: 20px auto;
+            box-shadow: black;
+            overflow: hidden;
+            height: 600px;
+        }
+        .wrapper h2{
+            font-weight: 700;
+            font-size: 30px;
+            padding: 5px 0 0;
+            margin-bottom: 34px;
+            pointer-events: none;
+            color: white;
+        }
+        
+        .wrapper .form-left p{
+            font-size: 0.9rem;
+            font-weight: 300;
+            line-height: 1.5;
+            pointer-events: none;
+        }
+        
+        .wrapper .form-left .text{
+            margin: 20px 0 25px;
+        }
+        
+        .wrapper .form-left p span{
+            font-weight: 700;
+        }
+        
+        .wrapper .form-left input{
+            padding: 15px;
+            background: #fff;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            width: 180px;
+            border: none;
+            margin: 15px 0 50px 0px;
+            cursor: pointer;
+            color: #333;
+            font-weight: 700;
+            font-size: 0.9rem;
+            appearance: unset;
+            outline: none;
+        }
+        
+        .wrapper .form-left input:hover{
+            background-color: #f2f2f2;
+        }
+        
+        .wrapper .form-right{
+            padding: 20px 40px;
+            position: relative;
+            width: 100%;
+        }
+        
+        .wrapper .form-right h2{
+            color: #3786bd;
+        }
+        .wrapper .form-right label{
+            font-weight: 600;
+            font-size: 15px;
+            color: #666;
+            display: block;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+        .wrapper .form-right .input-field {
+            width: 93%;
+            padding: 10px 15px;
+            border: 1px solid black;
+            border-top-left-radius: 5px;
+            /* border-bottom-right-radius: 5px; */
+            outline: none;
+            color: #333;
+            border-radius: 5px;
+        }
+        .wrapper .form-right .input-field:focus{
+            border: 1px solid #31a031;
+        }
+        .wrapper .option {
+            display: block;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            font-weight: 900;
+            cursor: pointer;
+            user-select: none
+        }
+        .wrapper .option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0
+        }
+        .wrapper .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 2px
+        }
+        .wrapper .option:hover input~.checkmark {
+            background-color: #f1f1f1
+        }
+        .wrapper .option input:checked~.checkmark {
+            border: 2px solid #e5e5e5;
+            background-color: #fff;
+            transition: 300ms ease-in-out all
+        }
+        .wrapper .checkmark:after {
+            content: "\2713";
+            position: absolute;
+            display: none;
+            color: #3786bd;
+            font-size: 1rem;
+        }
+        .wrapper .option input:checked~.checkmark:after {
+            display: block
+        }
+        .wrapper .option .checkmark:after {
+            left: 2px;
+            top: -4px;
+            width: 5px;
+            height: 10px
+        }
+        .wrapper #submitBtn{
+            padding: 12px;
+            background: #3786bd;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            width: 130px;
+            border: none;
+            margin: 6px 0 50px 0px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            margin-top: 15px;
+        }
+        .wrapper #submitBtn:hover{
+            background-color: #3785bde0;
+        }
+        .wrapper a{
+            text-decoration: none;
+        }
+        #txt1{
+            width: 93%;
+            padding: 10px 15px;
+            border: 1px solid black;
+            border-top-left-radius: 5px;
+            /* border-bottom-right-radius: 5px; */
+            outline: none;
+            color: #333;
+            border-radius: 5px;
+        }
+        #queryText{
+            width: 419px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        #g{
+            color: #333;
+            font-size: 18px;
+        }
+        #rd{
+            width: 83px;
+            font-size: 14px;
+            padding: 2px;
+            padding-left: 8px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form class="form-right" id="form" action="Home1.html" onsubmit="return validateForm()">
+        <h2 class="text-uppercase text-white">CONTACT US</h2>
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <label>Username</label>
+            <input type="text" name="nameofS" id="txt" class="input-field">
+          </div>
+          <div class="col-sm-6 mb-3">
+            <label>Email-ID</label>
+            <input type="Text" name="idofS" id="txt1" placeholder="xyz12@gmail.com">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <label>Select Your Gender</label>
+            <input type="radio" name="gender" value="F" id="g"> Female<br>
+            <input type="radio" name="gender" value="M" id="g"> Male
+          </div>
+          <div class="col-sm-6 mb-3">
+            <label>Select Year Of Study</label>
+            <select name="opt" id="rd">
+                <option>Ist Year</option>
+                <option>2nd Year
+                <option>3rd Year</option>
+                <option>4th Year</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 mb-3">
+            <label>Enter Your Query here:</label>
+            <div>
+              <textarea name="ta" id="queryText" rows="6" cols="50"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form-field">
+          <input type="submit" id="submitBtn" onclick="return validate()">
+        </div>
+      </form>
+    </div>
+    <script>
+        function validate() {
+            f = document.querySelector("#form")
+            var str = f.querySelector("#txt").value;
+            if (str == null || str.trim() == "") {
+                alert("You missed one of the required fields!!!");
+                return false;
+            } else if (str.length > 20) {
+                alert("Name must be at most 20 characters long only!!!!");
+                return false;
+            }
+             
+            ta=document.getElementById("txt").value
+
+            if (ta===" " || ta === null) {
+                alert("You missed one of the required field!!!")
+                return false
+            }
+            str1=f.idofS.value;
+            var check=/^([a-z0-9]{5,15})@gmail.com$/;
+            if(str1==null||str1==" ")
+            {
+              alert("Enter email id!!!!")
+              return false
+            }
+            else if(!str1.match(check))
+            {
+              alert("Email should be in format!!!!")
+              return false
+            }
+            var flag = false
+            for (var i = 0; i < f.gender.length; i++) {
+                if (f.gender[i].checked) {
+                    flag = true
+                    break;
+                }
+            }
+            if (flag == false) {
+                alert("Please select your gender!!!!!")
+                return false
+            }
+            var flag1 = false
+            for (var i = 0; i < f.opt.options.length; i++) {
+                if (f.opt.options.length[i].selected) {
+                    flag1 = true;
+                    break;
+                }
+
+            }
+            if (flag1 == false) {
+                alert("Please select your year of study!!!")
+                return false
+            }
+            str3=f.ta.value;
+            if (str3 == null || str3 == " ") {
+                alert("You forgot to enter your query!!!!")
+                return false
+            }
+            return true;
+        }
+    </script>
+  </body>
+</html>

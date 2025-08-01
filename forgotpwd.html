@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('images/i1.jpg');
+    background-size: contain;
+    backdrop-filter: brightness(0.3);
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 300px;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-color: black;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    text-align: center;
+    margin-top: 10px;
+}
+    </style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Forgot Password</h1>
+        <p>Please enter your email address to reset your password.</p>
+        <form id="forgotPasswordForm">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+            <br>
+            <button type="submit">Send Reset Link</button>
+            <p id="message" class="message"></p>
+        </form>
+    </div>
+    
+</body>
+</html>
+ 
+<script>
+document.getElementById('forgotPasswordForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const email = document.getElementById('email').value;
+    const messageElement = document.getElementById('message');
+
+    // Simulate sending a reset link
+    if (validateEmail(email)) {
+        messageElement.textContent = 'A reset link has been sent to ' + email + '.';
+        messageElement.style.color = 'green';
+        // Here you can add code to send the email to the server
+    } else {
+        messageElement.textContent = 'Please enter a valid email address.';
+        messageElement.style.color = 'red';
+    }
+});
+
+// Simple email validation function
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+  
+</script>
+
+  </body>
+</html>

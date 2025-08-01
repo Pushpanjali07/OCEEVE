@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        h2{
+            text-align: center;
+        }
+        body{
+        
+            margin-bottom: 0%;
+            background-image:url("images/i4.jpg");
+            background-size: repeat;
+            backdrop-filter: brightness(0.3);
+        }
+        .wrapper{
+            max-width: 500px;
+            background-color: rgb(176, 209, 209);
+            margin: auto;
+            display: flex;
+            box-shadow: black;
+            overflow: hidden;
+        
+        }
+        .wrapper h2{
+            font-weight: 700;
+            font-size: 30px;
+            padding: 5px 0 0;
+            margin-bottom: 34px;
+            pointer-events: none;
+            color: white;
+        }
+        
+        .wrapper .form-left p{
+            font-size: 0.9rem;
+            font-weight: 300;
+            line-height: 1.5;
+            pointer-events: none;
+        }
+        
+        .wrapper .form-left .text{
+            margin: 20px 0 25px;
+        }
+        
+        .wrapper .form-left p span{
+            font-weight: 700;
+        }
+        
+        .wrapper .form-left input{
+            padding: 15px;
+            background: #fff;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            width: 180px;
+            border: none;
+            margin: 15px 0 50px 0px;
+            cursor: pointer;
+            color: #333;
+            font-weight: 700;
+            font-size: 0.9rem;
+            appearance: unset;
+            outline: none;
+        }
+        
+        .wrapper .form-left input:hover{
+            background-color: #f2f2f2;
+        }
+        
+        .wrapper .form-right{
+            padding: 20px 40px;
+            position: relative;
+            width: 100%;
+        }
+        
+        .wrapper .form-right h2{
+            color: #090a0a;
+        }
+        .wrapper .form-right label{
+            font-weight: 600;
+            font-size: 15px;
+            color: #666;
+            display: block;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+        .wrapper .form-right .input-field {
+            width: 93%;
+            padding: 10px 15px;
+            border: 1px solid black;
+            border-top-left-radius: 5px;
+            /* border-bottom-right-radius: 5px; */
+            outline: none;
+            color: #333;
+            border-radius: 5px;
+        }
+        .wrapper .form-right .input-field:focus{
+            border: 1px solid #31a031;
+        }
+        .wrapper .option {
+            display: block;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            font-weight: 900;
+            cursor: pointer;
+            user-select: none
+        }
+        .wrapper .option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0
+        }
+        .wrapper .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 2px
+        }
+        .wrapper .option:hover input~.checkmark {
+            background-color: #f1f1f1
+        }
+        .wrapper .option input:checked~.checkmark {
+            border: 2px solid #e5e5e5;
+            background-color: #fff;
+            transition: 300ms ease-in-out all
+        }
+        .wrapper .checkmark:after {
+            content: "\2713";
+            position: absolute;
+            display: none;
+            color: #3786bd;
+            font-size: 1rem;
+        }
+        .wrapper .option input:checked~.checkmark:after {
+            display: block
+        }
+        .wrapper .option .checkmark:after {
+            left: 2px;
+            top: -4px;
+            width: 5px;
+            height: 10px
+        }
+        .wrapper .register{
+            padding: 12px;
+            background: #16405e;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            width: 130px;
+            border: none;
+            margin: 6px 0 50px 0px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        .wrapper .register:hover{
+            background-color: #3785bde0;
+        }
+        .wrapper a{
+            text-decoration: none;
+        }
+        #txt1{
+            width: 93%;
+            padding: 10px 15px;
+            border: 1px solid black;
+            border-top-left-radius: 5px;
+            /* border-bottom-right-radius: 5px; */
+            outline: none;
+            color: #333;
+            border-radius: 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="modal-header">
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="form-right" id="form" action="Home1.html" onsubmit="return validateForm()">
+        <h2 class="text-uppercase text-white"> STUDENT REGISTRATION FORM</h2>
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <label>Student Name</label>
+            <input type="text" name="clg_name" id="clg_name" class="input-field">
+          </div>
+          <div class="col-sm-6 mb-3">
+            <label>Username</label>
+            <input type="text" name="name" id="name" class="input-field">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label>EmailID</label>
+          <input type="Text" name="idofS" id="txt1" value="xyz1@gmail.com ">
+        </div>
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <label>Password</label>
+            <input type="password" name="pwd" id="pwd" class="input-field">
+          </div>
+          <div class="col-sm-6 mb-3">
+            <label>Current Password</label>
+            <input type="password" name="cpwd" id="cpwd" class="input-field">
+          </div>
+        </div>
+        <br>
+        <div>
+          <label for="formFileLg" class="form-label">UPLOAD YOUR ID</label>
+          <input class="form-control form-control-lg" id="formFileLg" type="file">
+        </div>
+        <br><br><br>
+        <div class="mb-3">
+          <label class="option">I agree to the <a href="#">Terms and Conditions</a>
+            <input type="checkbox" id="ch" checked> <!-- Give the checkbox an ID -->
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="form-field">
+          <input type="submit" value="Register" class="register" name="register">
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function validateForm() {
+        var clg = document.getElementById("clg_name").value;
+        clg=clg.trim();
+        if(clg.length === 0){
+          alert("Student name cannot be null!");
+          return false;
+        }
+        else if(clg.length > 20){
+          alert("Student name must be less than 20 characters!");
+          return false;
+        }
+        
+        var username = document.getElementById("name").value;
+        username=username.trim();
+        if (username.length === 0 ) {
+          alert("Username cannot be null!");
+          return false;
+        }
+        else if(username.length<3){
+          alert("The username must consist of at least 3 characters!");
+          return false;
+        }
+        else if(!/^[A-Za-z\s]+$/.test(username)){
+          alert("Enter a vaild name");
+          return false;
+        }
+        f = document.querySelector("#form");
+        str1=f.idofS.value.trim();
+        var check=/^([a-z 0-9]{5,15})@gmail.com$/;
+        if(str1==null||str1==" "){
+          alert("Enter email id!");
+          return false;
+        }
+        else if(!check.test(str1)){
+          alert("Enter a vaild email!");
+          return false;
+        }
+        var password = document.getElementById("pwd").value;
+        if(password.length==0){
+          alert("Password cannot be null!");
+          return false;
+        }
+        
+        else if(!/^([a-z]{1,})([0-9]{1,})([@#$%*]{1,})+$/.test(password)){
+          alert("The password should include alphabetic characters, one digit, and one special character(consecutive)!");
+          return false;
+        }
+        var currentPassword = document.getElementById("cpwd").value;
+        if (password !== currentPassword) {
+          alert("Current Password must be equal to the the password!");
+          return false;
+        }
+        var ch = document.getElementById("ch");
+        if (!ch.checked) {
+          alert("Please agree to the Terms and Conditions!");
+          return false;
+        }
+        var file = document.getElementById("formFileLg");
+        if (file.files.length === 0) {
+          alert("Please upload your ID file!");
+          return false;
+        }
+        return true;
+      }
+    </script>
+    </body>
+</html>
