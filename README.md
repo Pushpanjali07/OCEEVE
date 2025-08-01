@@ -60,6 +60,20 @@ This project is licensed under the MIT License — see [LICENSE](./LICENSE) file
 
 ---
 
+### 🔄 Project History & Contributions
+
+This project was originally developed as a team project during college.
+
+The current version reflects Pushpanjali’s individual contributions, which include:
+- A newly created **Contact** page  
+- Major edits to the **Login** and **Index** pages (including carousel customization)  
+- A refreshed **color scheme** and updated **styling across the site**
+
+**Note:** The **About** page has not been modified and remains as it was in the original team version.
+
+
+---
+
 ## 🙋‍♀️ Author
 
 Made with ❤️ by Pushpanjali  
